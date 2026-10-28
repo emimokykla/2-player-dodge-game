@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dodge or Die</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main class="game-container">
+    <header class="topbar">
+      <div>
+        <h1>Dodge<span class="dot">.</span></h1>
+      </div>
+    </header>
+
+    <section class="scoreboard">
+      <div class="player-card blue-card">
+        <div class="player-heading">
+          <span class="player-dot blue"></span>
+          <span>P1</span>
+        </div>
+        <div class="player-stats">
+          <span class="hearts" id="hearts1">♥ ♥ ♥</span>
+          <span class="score" id="score1">0.0s</span>
+        </div>
+      </div>
+
+      <div class="timer-card">
+        <span>TIME</span>
+        <strong id="timer">00:00</strong>
+        <span id="round-label">READY</span>
+      </div>
+
+      <div class="player-card red-card">
+        <div class="player-heading">
+          <span class="player-dot red"></span>
+          <span>P2</span>
+        </div>
+        <div class="player-stats">
+          <span class="hearts" id="hearts2">♥ ♥ ♥</span>
+          <span class="score" id="score2">0.0s</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="arena-wrapper">
+      <canvas id="game" width="900" height="500"
+        aria-label="Dodge or Die žaidimo arena"></canvas>
+
+      <div class="overlay" id="overlay">
+        <div class="overlay-content">
+          <p class="eyebrow" id="overlay-eyebrow"></p>
+          <h2 id="overlay-title">READY</h2>
+          <p class="overlay-description" id="overlay-description"></p>
+          <button id="start-button">PLAY</button>
+          <p class="hint"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls">
+      <p>P1 <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></p>
+      <p>P2 <kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd></p>
+      <p><kbd>P</kbd> pause · <kbd>R</kbd> restart</p>
+    </section>
+  </main>
+</body>
+</html>
